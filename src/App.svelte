@@ -1,4 +1,6 @@
 <script>
+	import 'virtual:windi.css'
+
 	let name = 'world';
 </script>
 
