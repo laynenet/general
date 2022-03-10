@@ -50,7 +50,7 @@ export default {
 		css({ output: 'bundle.css' }),
 
 		//Include Windi CSS
-		WindiCss(),
+		...WindiCss(),
 
 		// If you have external dependencies installed from
 		// npm, you'll most likely need these plugins. In
