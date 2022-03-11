@@ -1,0 +1,1 @@
+<div>This is index.svelte available at localhost:3000<br>Try visitng localhost:3000/home</div>
