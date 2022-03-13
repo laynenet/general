@@ -1,10 +1,30 @@
 <script>
-	import Collapsible from "./Collapsible.svelte";
+	import BarCreator from "./BarCreator.svelte"
 
 	let name = 'Name';
 	
 	let sideBarOn = true;
 	function sideBarSwap(){ sideBarOn=!sideBarOn; }
+
+
+	const barData = {
+		"Title A":{
+			"Data 1":"href",
+			"Data 2":"href",
+			"Data 3":"href",
+		},
+		"Title B":{
+			"Data 1":"href",
+			"Data 2":"href",
+			"Title C":{
+				"Data 1":"href",
+				"Data 2":"href",
+				"Data 3":"href",
+			},
+			"Data 3":"href",
+		},
+	}
+
 
 </script>
 
@@ -39,24 +59,8 @@
 			<div class="border-t-1 border-dark-400 pt-1 pl-1 pr-1">
 				<div class="flex flex-col">
 					<div class="mb-1">#Bar Content</div>
-
-					<Collapsible title="Title">
-						<div>Data</div>
-						<div>Data</div>
-						<div>Data</div>
-					</Collapsible>
-					<Collapsible title="Title">
-						<div>Data</div>
-						<div>Data</div>
-						<Collapsible title="Title">
-							<div>Data</div>
-							<div>Data</div>
-							<div>Data</div>
-						</Collapsible>
-						<div>Data</div>
-					</Collapsible>
+					<BarCreator data={barData}></BarCreator>
 				</div>
-				
 			</div>
 		</div>
 	</div>
@@ -74,6 +78,5 @@
 		Main Content
 	</div>
 </div>
-
 
 
