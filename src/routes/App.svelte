@@ -1,5 +1,5 @@
 <script>
-	import BarCreator from "./BarCreator.svelte"
+	import BarCreator from "./C/BarCreator.svelte"
 
 	let name = 'Name';
 	
