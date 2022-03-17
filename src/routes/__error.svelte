@@ -11,11 +11,11 @@
     
 
     function update(){
-        errArr = [...errArr, [Math.round(Math.random()*1600),Math.round(Math.random()*800)]];
+        errArr = [...errArr, [Math.round(Math.random()*screen.width),Math.round(Math.random()*screen.height)]];
     }
 
     onMount(() => {
-        for(let i=0;i<300;i++){
+        for(let i=0;i<200;i++){
             update();
         }
     });
@@ -28,12 +28,7 @@
 
 
 <div class="w-full h-full" on:click={update}>
-    <!-- Errors BG -->
-    <div class="absolute w-full h-full overflow-hidden">
-        {#each errArr as e}
-            <ErrorBG x={e[0]} y={e[1]} />
-        {/each}
-    </div>
+    
     <!-- Error Display -->
     <div class="flex justify-center items-center w-full h-full">
         <div class="flex flex-col gap-1 w-64 h-35 bg-dark-800 p-2 rounded-md text-light-900">
@@ -47,6 +42,13 @@
                 <div class="group-hover:(text-light-50)">Home</div>
             </div>
         </div>
+    </div>
+
+    <!-- Errors BG -->
+    <div class="absolute top-0 w-full h-full overflow-hidden pointer-events-none">
+        {#each errArr as e}
+            <ErrorBG x={e[0]} y={e[1]} />
+        {/each}
     </div>
 </div>
 
