@@ -4,10 +4,6 @@
 </style>
 
 
-
-<div class="w-full h-full bg-dark-900">
-
 <!-- <slot> is essentail where the page being visited is fitted in so don't delete it -->
 <slot></slot>
 
-</div>
