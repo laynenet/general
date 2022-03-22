@@ -1,0 +1,350 @@
+{
+    "config":[
+        {
+            "name":"Name",
+            "desc":"Your name",
+            "path":"/name",
+            "type":"container",
+            "keys":[
+                {
+                    "name":"First Name",
+                    "desc":"Your legal first name",
+                    "path":"/name/first",
+                    "type":"string"
+                },
+                {
+                    "name":"Middle Name/Initial",
+                    "desc":"You legal middle name or initial",
+                    "path":"/name/middle",
+                    "type":"string"
+                },
+                {
+                    "name":"Last Name",
+                    "desc":"You legal last name",
+                    "path":"/name/last",
+                    "type":"string"
+                },
+                {
+                    "name":"Preffered Name",
+                    "desc":"The name you would preffer to be called",
+                    "path":"/name/name",
+                    "type":"string"
+                }
+            ]
+        },
+        {
+            "name":"Contact",
+            "desc":"Different ways you can be contacted",
+            "path":"/contact",
+            "type":"container",
+            "keys":[
+                {
+                    "name":"Email",
+                    "desc":"Your primary email",
+                    "path":"/contact/email1",
+                    "type":"email"
+                },
+                {
+                    "name":"Secondary Email",
+                    "desc":"Your secondary email",
+                    "path":"/contact/email2",
+                    "type":"email"
+                },
+                {
+                    "name":"Phone Number",
+                    "desc":"Your personal or mobile phone number",
+                    "path":"/contact/phone1",
+                    "type":"phonenum"
+                },
+                {
+                    "name":"Secondary Phone Number",
+                    "desc":"Your seconday or landline phone number",
+                    "path":"/contact/phone2",
+                    "type":"phonenum"
+                }
+            ]
+        },
+        {
+            "name":"Address",
+            "desc":"Your current residence",
+            "path":"/address",
+            "type":"container",
+            "keys":[
+                {
+                    "name":"Country",
+                    "desc":"The country you reside in",
+                    "path":"/address/country",
+                    "type":"country"
+                },
+                {
+                    "name":"Address",
+                    "desc":"Your address",
+                    "path":"/address/address",
+                    "type":"address"
+                }
+            ]
+        },
+        {
+            "name":"Profile",
+            "desc":"Information about your profile",
+            "path":"/profile",
+            "type":"container",
+            "keys":[
+                {
+                    "name":"Description",
+                    "desc":"A short desciption or bio",
+                    "path":"/profile/desc",
+                    "type":"string"
+                },
+                {
+                    "name":"Long Description",
+                    "desc":"A long description or bio",
+                    "path":"/profile/longdesc",
+                    "type":"string-long"
+                },
+                {
+                    "name":"Photo",
+                    "desc":"A profile photo",
+                    "path":"/profile/photo1",
+                    "type":"image"
+                },
+                {
+                    "name":"Secondary Photo",
+                    "desc":"A secondary profile photo",
+                    "path":"/profile/photo2",
+                    "type":"image"
+                }
+            ]
+        },
+        {
+            "name":"School",
+            "desc":"Your school and academic career",
+            "path":"/school",
+            "type":"container",
+            "keys":[
+                {
+                    "name":"School",
+                    "desc":"List of all schools you are currently enrolled in",
+                    "path":"/school/school",
+                    "type":"array",
+                    "arraytype":"string"
+                },
+                {
+                    "name":"High School",
+                    "desc":"Your high school academic career",
+                    "path":"/school/hs",
+                    "type":"container",
+                    "keys":[
+                        {
+                            "name":"Schools",
+                            "desc":"List of all high schools you have attended",
+                            "path":"/school/hs/schools",
+                            "type":"array",
+                            "arraytype":"string"
+                        },
+                        {
+                            "name":"GPA",
+                            "desc":"Your high school GPA",
+                            "path":"/school/hs/gpa",
+                            "type":"container",
+                            "keys":[
+                                {
+                                    "name":"Weighted",
+                                    "desc":"Your weighted high school GPA",
+                                    "path":"/school/hs/gpa/weighted",
+                                    "type":"number"
+                                },
+                                {
+                                    "name":"Unweighted",
+                                    "desc":"Your unweighted high school GPA",
+                                    "path":"/school/hs/gpa/unweighted",
+                                    "type":"number"
+                                }
+                            ]
+                        },
+                        {
+                            "name":"Transcript",
+                            "desc":"Your highschool transcript",
+                            "path":"/school/hs/transcript",
+                            "type":"doc"
+                        },
+                        {
+                            "name":"Honors & Awards",
+                            "desc":"Highschool honors and awards",
+                            "path":"/school/hs/honors",
+                            "type":"array",
+                            "arraytype":"string"
+                        }
+                    ]
+                },
+                {
+                    "name":"College",
+                    "desc":"Your college academic career",
+                    "path":"/school/col",
+                    "type":"container",
+                    "keys":[
+                        {
+                            "name":"Schools",
+                            "desc":"List of all colleges you have attended",
+                            "path":"/school/col/schools",
+                            "type":"array",
+                            "arraytype":"string"
+                        },
+                        {
+                            "name":"GPA",
+                            "desc":"Your college GPA",
+                            "path":"/school/col/gpa",
+                            "type":"container",
+                            "keys":[
+                                {
+                                    "name":"Weighted",
+                                    "desc":"Your weighted college GPA",
+                                    "path":"/school/col/gpa/weighted",
+                                    "type":"number"
+                                },
+                                {
+                                    "name":"Unweighted",
+                                    "desc":"You unweighted college GPA",
+                                    "path":"/school/col/gpa/unweighted",
+                                    "type":"number"
+                                }
+                            ]
+                        },
+                        {
+                            "name":"Transcript",
+                            "desc":"Your college transcript",
+                            "path":"/school/col/transcript",
+                            "type":"doc"
+                        }
+                    ]
+                },
+                {
+                    "name":"Testing",
+                    "desc":"Testing scores",
+                    "path":"/school/test",
+                    "type":"container",
+                    "keys":[
+                        {
+                            "name":"ACT",
+                            "desc":"Your ACT super score",
+                            "path":"/school/test/act",
+                            "type":"act"
+                        },
+                        {
+                            "name":"SAT",
+                            "desc":"Your SAT super score",
+                            "path":"/school/test/sat",
+                            "type":"sat"
+                        }
+                    ]
+                },
+                {
+                    "name":"Certifications",
+                    "desc":"Certifications you have obtained",
+                    "path":"/school/certs",
+                    "type":"array",
+                    "arraytype":"string"
+                },
+                {
+                    "name":"Degrees",
+                    "desc":"Degrees you have obtained",
+                    "path":"/school/degrees",
+                    "type":"array",
+                    "arraytype":"string"
+                }
+            ]
+        },
+        {
+            "name":"Jobs",
+            "desc":"Your job experience",
+            "path":"/jobs",
+            "type":"container",
+            "keys":[
+                {
+                    "name":"Current Job",
+                    "desc":"Job you currently hold",
+                    "path":"/jobs/current",
+                    "type":"job"
+                },
+                {
+                    "name":"Jobs",
+                    "desc":"Jobs you have held",
+                    "path":"/jobs/previous",
+                    "type":"job"
+                }
+            ]
+        },
+        {
+            "name":"Internships",
+            "desc":"Your internships",
+            "path":"/internships",
+            "type":"container",
+            "keys":[
+                {
+                    "name":"Current Internship",
+                    "desc":"Internship you are currently in",
+                    "path":"/internships/current",
+                    "type":"internship"
+                },
+                {
+                    "name":"Past Internships",
+                    "desc":"Internships you have held",
+                    "path":"/internships/previous",
+                    "type":"array",
+                    "arraytype":"internship"
+                }
+            ]
+        },
+        {
+            "name":"Community Service",
+            "desc":"Your community service experience",
+            "path":"/comserv",
+            "type":"container",
+            "keys":[
+                {
+                    "name":"Volunteer Hours",
+                    "desc":"Hours you have volunteered",
+                    "path":"/comserv/hours",
+                    "type":"number",
+                    "min":0,
+                    "max":5000
+                },
+                {
+                    "name":"Community Service Experiences",
+                    "desc":"Community service experiences",
+                    "path":"/comserv/comserv",
+                    "type":"array",
+                    "arraytype":"comserv"
+                }
+            ]
+        },
+        {
+            "name":"Languages",
+            "desc":"Languages you know",
+            "path":"/lang",
+            "type":"container",
+            "keys":[
+                {
+                    "name":"First Language",
+                    "desc":"Your first language",
+                    "path":"/lang/first",
+                    "type":"language"
+                },
+                {
+                    "name":"Second Language",
+                    "desc":"Your second language",
+                    "path":"/lang/second",
+                    "type":"language"
+                },
+                {
+                    "name":"Additional Languages",
+                    "desc":"Other languages you know",
+                    "path":"/lang/additional",
+                    "type":"array",
+                    "arraytype":"language",
+                    "max":5
+                }
+            ]
+        }
+    ]
+}
